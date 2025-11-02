@@ -1,0 +1,228 @@
+/* styles/main.css */
+
+/* =============================================== */
+/* 1. VARIÁVEIS E BASE */
+/* =============================================== */
+
+:root {
+    --primary-color: #007bff; /* Azul vibrante para botões e destaque */
+    --secondary-color: #6c757d; /* Cinza para botões secundários */
+    --success-color: #28a745; /* Verde para confirmação */
+    --font-color: #333;
+    --background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =============================================== */
+/* 2. HEADER E FOOTER */
+/* =============================================== */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 40px;
+    background-color: #e9ecef;
+    color: #666;
+    border-top: 1px solid #ddd;
+}
+
+/* =============================================== */
+/* 3. FORMS E CARDS BASE */
+/* =============================================== */
+
+.card {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px; /* Largura fixa para campos de busca */
+}
+
+/* =============================================== */
+/* 4. SEÇÃO DE FROTA E CARDS DOS CARROS */
+/* =============================================== */
+
+#frota h2, #summary h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Layout responsivo de 3-4 colunas */
+    gap: 30px;
+}
+
+.car-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo da Imagem (Tag <img>) */
+.car-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.car-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+}
+
+.car-card p {
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+
+.car-card strong {
+    font-size: 1.1em;
+    color: var(--success-color);
+    display: block;
+    margin-top: 10px;
+}
+
+/* =============================================== */
+/* 5. BOTÕES GERAIS */
+/* =============================================== */
+
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Botão de Alugar dentro do Card */
+.car-card button {
+    width: 100%;
+    margin-top: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+
+.car-card button:hover {
+    background-color: #0056b3;
+}
+
+
+/* =============================================== */
+/* 6. ESTILOS DA SEÇÃO DE RESUMO (#summary) */
+/* =============================================== */
+
+#summary {
+    padding: 40px;
+    border: 2px solid var(--primary-color);
+}
+
+#summary-details p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.final-price {
+    font-size: 1.8em !important; 
+    color: var(--primary-color) !important;
+    margin-top: 1.5rem !important;
+    padding-top: 10px !important;
+    border-top: 3px solid var(--primary-color) !important;
+    font-weight: bold;
+}
+
+.btn-confirm {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    margin-right: 15px;
+}
+
+.btn-confirm:hover {
+    background-color: #1e7e34;
+}
+
+.btn-back {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
+}
+
